@@ -30,9 +30,9 @@ download_dir = os.path.join(project_root, "downloads_Inova")
 os.makedirs(download_dir, exist_ok=True)
 
 # Configurações e variáveis globais
-usuario_padrao = "u04846"
-senha_padrao = "@Inova260909"
-URL = 'https://glpi10.pmjlle.joinville.sc.gov.br/index.php?noAUTO=1'
+usuario_padrao = "MEU USUARIO"
+senha_padrao = "MINHA_SENHA"
+URL = 'URL_SISTEMA'
 
 # Configura opções do Chrome
 options = Options()
@@ -143,7 +143,7 @@ def fazer_download():
         print("Download finalizado.")
         sleep(5)
         copiar_csv_para_area_transferencia()
-        abrir_planilha_e_colar("https://docs.google.com/spreadsheets/d/1CSPaLSCYeov30wmoiekIc-7MJKrTtedFd9WJGUtVKls/edit?gid=1305019307#gid=1305019307")
+        abrir_planilha_e_colar("LINK DA PLANILHA")
     else:
         print("Tempo de espera excedido, download pode não ter terminado.")
         navegador.quit()
@@ -268,4 +268,5 @@ def agendar_e_rodar(dias, horarios):
 if __name__ == "__main__":
     root = tk.Tk()
     app = AgendadorGUI(root)
+
     root.mainloop()
